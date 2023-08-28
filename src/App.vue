@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import { OverlayScrollbarsComponent } from 'overlayscrollbars-vue';
-const options = {
-  className: 'os-theme-dark',
-  resize: 'both',
-  sizeAutoCapable: true,
+import { OverlayScrollbarsComponent } from "overlayscrollbars-vue";
+import type { PartialOptions } from "overlayscrollbars";
+const options : PartialOptions = {
   paddingAbsolute: true,
   showNativeOverlaidScrollbars: true,
   scrollbars: {
-    clickScrolling: true,
-    autohide: 'scroll',
+    theme: 'os-theme-dark',
+    clickScroll: true,
+    autoHide: 'scroll',
   },
 };
 </script>
 
 <template>
-  <OverlayScrollbarsComponent
-    :options="options"
-    defer
-  >
+  <OverlayScrollbarsComponent :options="options" defer>
     <div class="container" data-overlayscrollbars-initialize>
       <ul>
         <li>Lorem ipsum dolor sit.</li>
